@@ -1,1 +1,5 @@
 # Trading-strategy-using-kernel-regression
+Kernel regression can be seen as a smoother version of nearest neighbor methods, where instead of relying on just a few nearest neighbors, it considers all data points but weighs them differently based on their proximity.The kernel function assigns higher weights to nearby data points and lower weights to those farther away. This allows the model to give more importance to nearby observations in estimating the value of the target variable for a particular input.
+using kernel regression we can get a smoothed price line which i used to make an envolope. the upper bound of envolope is 2 standard deviation above the smoothed price line and similarly lower bound is 2 standard deviation below the smoothed price line.
+if the price crosses the upper bound then the stock is overbought so the algorithm generate a sell signal and if the price crosses the lower bound then the stock is overselled so the algorithm generate a buy signal.
+to know volatility in the stock i used Average true range(ATR) and the stop loss and target are calculated based on ATR and a fixed risk to reward ratio.
